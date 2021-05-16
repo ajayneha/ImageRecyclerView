@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+        <import type="com.appentus.assessment.R" />
+        <variable
+            name="data"
+            type="com.appentus.assessment.model.MediaResponse" />
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/_5sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            imageUrl="@{data.downloadUrl}"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>
